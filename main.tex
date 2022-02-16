@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} % change default font to times
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+% \usepackage[UKenglish]{babel}
+% \usepackage{csquotes}
+\usepackage[numbers]{natbib}
+\usepackage{lscape}
+\usepackage{hyperref}
+
+
+\title{An Explainable Robotic Perception Framework for Indoor Scene Understanding}
+\author{Jihoon Kim}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Background and Problem Description}
+%%% A description of the topic and an explanation of why further research in the area is important (the gap in the literature - what we need to know)
+%%% A key question, hypothesis or the broad topic for investigation
+
+% Why is indoor scene understanding important?
+The field has witnessed rapid improvements in scene understanding thanks to the introduction of state-of-the-art deep learning methods and ever-improving computational resources.
+AI with a good scene understanding can be useful in many places.
+%(e.g., domestic robots, autonomous vehicles).
+For example, it may help people with visual difficulties by creating an accurate 3D representation of the surrounding environment and providing safe guidance. Also, the recent rise of \textit{``metaverse''} further increases the demand of scene understanding for real-time communication and interaction between its users and the real-world environment \citep{oculus2021}.
+
+However, 3D scene understanding still remains a very challenging task till this date.
+This is mainly due to interactions between objects and changes in information across different scenes \citep{naseer2018indoorsurvey}.
+Also, there are fundamental differences in the way humans and machines perceive the environment.
+Humans are naturally capable of understanding complex relationships between objects and their semantics from an image or a video, but this information is simply a list of numeric values for machines.
+Therefore, a machine learning agent must be able to extract both geometric and semantic information in order to give information useful to humans.
+
+The house interior industry may also hugely benefit from the rise of scene understanding.
+Providing a 3D replica of a real house with editable objects can be hugely attractive to its customers as they will be able to easily change and customise their houses as wished in a virtual environment.
+However, to the best of my knowledge, there has been no study in developing an entire framework for full indoor perception with robots, making this an interesting topic to study.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Aim, Objectives and Contributions}
+%%% An outline of the key aims of the research
+This research aims to develop a real-time robotics perception framework that constructs a 3D representation of a real-world scene with editable geometric models.
+The objectives are to:
+\begin{enumerate}
+    \item develop a real-time robotic perception and navigation method that captures information from real-world indoor scenes with explainable deep learning methods
+    \item develop an automated 3D scan to CAD method that uses captured information to reconstruct a scene and convert into editable geometric models with semantic contexts with minimum human interventions
+\end{enumerate}
+
+% 1) develop a real-time robotic perception and navigation method that captures information from real-world indoor scenes with explainable deep learning methods; and
+% 2) develop an automated 3D scan to CAD method that uses captured information to reconstruct a scene and convert into editable geometric models with semantic contexts with minimum human interventions.
+
+% anticipated research contributions
+% there are conceptual, methodological, theoretical (most of the time) contributions
+Theoretical and methodological contributions in indoor scene understanding with robotic perception will be made to the relevant field by achieving these objectives.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Key Literature}
+\label{sec:literature-review}
+%%% evidence of interest in, experience of, and understanding of the proposed area of study
+%%% A brief outline of key literature in the area [what we already know]
+
+% Numerous improvements have been made for indoor scene understanding
+
+A sufficient amount of labelled images is essential to train a machine learning agent to obtain useful information from perception data.
+\citet{silberman2011indoor} and \citet{li2018interiornet, mccormac2016scenenet} has improved indoor scene understanding by providing large-scale real and synthetic indoor image datasets, respectively.
+% write popular core techniques here
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research Design and Methodology}
+%%% Details of how the research will be carried out, including any special facilities / resources etc. which would be required and any necessary skills which you either have already or would need to acquire [the tools that will enable us to fill the gap you have identified]
+
+%%% Show three things:
+%%% 1. The research is feasible within the amount of time you have.
+%%% 2. you can do the research
+%%% 3. you are aware of the limitations of your preferred method and have (even if only very briefly) considered other options.
+
+\subsection{Empirical Materials}
+\subsubsection{Robot Platform}
+
+\subsubsection{Simulation Environment}
+
+% \subsection{Tasks and Time Allocation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+
+    \subsection{Research Tasks and Time Allocation}
+    %%% A plan and timetable of the work you will carry out
+    %%% the feasibility of successfully completing the project in the time available
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.9]{images/gantt-chart.png}
+        \caption{Gantt chart for time allocation of this project.}
+        \label{fig:gantt-chart}
+    \end{figure}
+
+\end{landscape}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\bibliographystyle{IEEEtranN}
+\bibliography{references.bib}
+
+\end{document}
