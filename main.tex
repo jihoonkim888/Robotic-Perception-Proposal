@@ -62,22 +62,46 @@ The objectives are to:
 Theoretical and methodological contributions in indoor scene understanding with robotic perception will be made to the relevant field by achieving these objectives.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Key Literature}
+\section{Literature Review}
 \label{sec:literature-review}
 %%% evidence of interest in, experience of, and understanding of the proposed area of study
 %%% A brief outline of key literature in the area [what we already know]
-\subsection{Perception and Navigation}
+\subsection{Perception}
 % scene classification, object detection
+\subsubsection{Image Classification}
+% Section 6.1 of Naseer et al.
 
 
-\subsection{3D Scan to CAD}
+\subsubsection{Object Detection}
+% Section 6.2
+
+
+\subsubsection{Semantic Segmentation}
+% Section 6.3
+
+
+\subsubsection{Object Pose Estimation}
+% Section 6.5
+
+
+\subsection{Navigation}
+\subsubsection{Reinforcement Learning}
+A reinforcement learning (RL) agent can be trained to move safely in an unperceived environment while maximising the amount of perceived data.
+
+
+\subsection{3D Reconstruction}
+% Section 6.6
+3D scan to CAD
 % object detection, pose estimation, 3D reconstruction, saliency detection
 
 % Numerous improvements have been made for indoor scene understanding
-\subsection{Image Datasets}
+\subsection{Datasets}
 A sufficient amount of labelled images is essential to train a machine learning agent to obtain useful information from perception data.
 \citet{silberman2011indoor} and \citet{li2018interiornet, mccormac2016scenenet} has improved indoor scene understanding by providing large-scale real and synthetic indoor image datasets, respectively.
-% write popular core techniques here
+
+\subsection{Explainable Learning Methods}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -91,8 +115,10 @@ A sufficient amount of labelled images is essential to train a machine learning 
 
 \subsection{Empirical Materials}
 \subsubsection{Robot Platform}
+TurtleBot with a RGB-D sensor would be sufficient for perception and navigation tasks planned in this project.
 
 \subsubsection{Simulation Environment}
+Gazebo
 
 % \subsection{Tasks and Time Allocation}
 

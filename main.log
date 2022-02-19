@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.15)  16 FEB 2022 22:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.15)  19 FEB 2022 16:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -341,10 +341,10 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
  [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<images/gantt-chart.png, id=76, 774.822pt x 260.829pt>
+<images/gantt-chart.png, id=104, 774.822pt x 260.829pt>
 File: images/gantt-chart.png Graphic file (type png)
 <use images/gantt-chart.png>
-Package pdftex.def Info: images/gantt-chart.png  used on input line 109.
+Package pdftex.def Info: images/gantt-chart.png  used on input line 135.
 (pdftex.def)             Requested size: 697.33336pt x 234.74391pt.
  [3
 
@@ -374,21 +374,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--30
 
 ] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 62D665D20A5336F4B622710F956721A2;2064.
+(rerunfilecheck)             Checksum: 05B5920E0B13E33711371DDE01272FB8;3106.
  ) 
 Here is how much of TeX's memory you used:
- 9480 strings out of 478286
- 147681 string characters out of 5850726
- 450178 words of memory out of 5000000
- 27525 multiletter control sequences out of 15000+600000
+ 9494 strings out of 478286
+ 147941 string characters out of 5850726
+ 448187 words of memory out of 5000000
+ 27532 multiletter control sequences out of 15000+600000
  507349 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,7n,63p,513b,390s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,513b,388s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (4 pages, 368438 bytes).
+Output written on main.pdf (4 pages, 370728 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
- 102 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 144 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 
