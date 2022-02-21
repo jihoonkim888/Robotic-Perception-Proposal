@@ -50,8 +50,8 @@ Therefore, it will be an interesting and contributable work to develop an entire
 This research aims to develop a real-time robotics perception framework that constructs a 3D representation of a real-world scene with editable geometric models.
 The objectives are to:
 \begin{enumerate}
-    \item develop a real-time robotic perception and navigation method that captures information from real-world indoor scenes with explainable deep learning methods
-    \item develop an automated 3D scan to CAD method that uses captured information to reconstruct a scene and convert into editable geometric models with semantic contexts with minimum human interventions
+	\item develop a real-time robotic perception and navigation method that captures information from real-world indoor scenes with explainable deep learning methods
+	\item develop an automated 3D scan to CAD method that uses captured information to reconstruct a scene and convert into editable geometric models with semantic contexts with minimum human interventions
 \end{enumerate}
 
 % 1) develop a real-time robotic perception and navigation method that captures information from real-world indoor scenes with explainable deep learning methods; and
@@ -83,13 +83,13 @@ Further, \citet{wu20153d} proposed the use of convolutional Deep Belief Network 
 The use of convolutional layers reduces the computational costs compared to fully-connected (FC) layers thanks to lower number of parameters from weight sharing.
 
 \begin{figure}[t]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/mvcnn.png}
-    \caption{Multi-View CNN proposed by \citet{su2015multi}}
-    \label{fig:mvcnn}
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/mvcnn.png}
+	\caption{Multi-View CNN proposed by \citet{su2015multi}}
+	\label{fig:mvcnn}
 \end{figure}
 
-\citet{su2015multi} proposed Multi-View CNN (MVCNN) that uses multiple 2D render views of 3D objects for classification, shown in Figure \ref{fig:mvcnn}.
+\citet{su2015multi} proposed Multi-View Convolutional Neural Network (MVCNN) that uses multiple 2D render views of 3D objects for classification, shown in Figure \ref{fig:mvcnn}.
 It would be possible to capture multiple images of a 3D object in different views as it is planned to use video-recording robots for perception.
 \citet{qi2016volumetric} argued that MVCNNs perform better than volumetric CNNs due to input resolutions.
 The 3D representation of an object must be reduced to train a deep learning model in a reasonable timeframe.
@@ -116,11 +116,18 @@ In order to reconstruct a human-interpretable scene, it is important for this pr
 However, it remains one of the most challenging tasks as obtaining dense pixel-level predictions is difficult due to occulusions and cluttering backgrounds in the real world.
 Also, it is heavily affected by the appearance and scale changes of objects as a robot obtains data while moving in an environment.
 
-Conditional Random Field (CRF) has been the most popular choice for semantic segmentation.
+Conditional Random Field (CRF) has been the most popular choice for semantic segmentation with RGB-D data \citep{hermans2014semantic, deng2015semantic} due to its flexiblity on model contextualisation.
+Due to the recent rise of deep learning based methods, CNNs have been increasingly used \citep{gupta2014semantic, long2015fcsemantic} in the field, providing high-resolution segmentation.
+\citet{couprie2013semantic} labelled the RGB-D images and videos of indoor scenes using multiscale CNN to learn features directly with remarkable accuracies.
+A similar technique could be used for scene segmentation in this project.
+
 
 \subsubsection{Object Pose Estimation}
 \label{sec:object-pose-estimation}
 % Section 6.5
+Pose estimation is crucial for 3D CAD reconstruction task of objects in this project.
+It is similar to object detection explained in Section \ref{sec:object-detection}, therefore, they are often addressed jointly \citep{sedaghat2016pose}.
+The most challenging tasks for pose estimation are to detect objects and estimate their orientations concurrently, and to build an algorithm robust to changing positions of robots in an environment.
 
 
 \subsection{Navigation}
@@ -167,16 +174,16 @@ Gazebo can be used
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{landscape}
 
-    \subsection{Research Tasks and Time Allocation}
-    %%% A plan and timetable of the work you will carry out
-    %%% the feasibility of successfully completing the project in the time available
+	\subsection{Research Tasks and Time Allocation}
+	%%% A plan and timetable of the work you will carry out
+	%%% the feasibility of successfully completing the project in the time available
 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.9]{images/gantt-chart.png}
-        \caption{Gantt chart for time allocation of this project.}
-        \label{fig:gantt-chart}
-    \end{figure}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.9]{images/gantt-chart.png}
+		\caption{Gantt chart for time allocation of this project.}
+		\label{fig:gantt-chart}
+	\end{figure}
 
 \end{landscape}
 
