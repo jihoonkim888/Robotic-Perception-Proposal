@@ -66,9 +66,12 @@ Theoretical and methodological contributions in indoor scene understanding with 
 \label{sec:literature-review}
 %%% evidence of interest in, experience of, and understanding of the proposed area of study
 %%% A brief outline of key literature in the area [what we already know]
+
 \subsection{Perception}
 % scene classification, object detection
+
 \subsubsection{Image Classification}
+\label{sec:image-classification}
 % Section 6.1 of Naseer et al.
 A perception framework should perform scene image classification to give the object detection and semantic segmentation models more general and useful information about a scene.
 % Information about a scene or objects is fundamental for more sophisticated tasks such as object detection and scene segmentation.
@@ -97,17 +100,26 @@ The former uses perceived point cloud directly to obtain high-level features fro
 
 
 \subsubsection{Object Detection}
+\label{sec:object-detection}
 % Section 6.2
 % Once classification of scenes and objects is performed,
-The object detection algorithm in this project must be able to perform ``amodal object detection'', i.e. to find the location, shape and orientation of an object in a scene.
+The object detection algorithm in this project must be able to perform \textit{``amodal object detection''}, i.e., to find the location, shape and orientation of an object in a scene.
 Similar to other detection techniques in the field, the initial object detection approaches were based on handcrafted features \citep{khan2015separating}.
-However, the most recent approaches utilise deep neural network based algorithms (e.g.,region proposal generation \citep{chen2015objdet}).
+However, the most recent approaches utilise deep neural network based algorithms (e.g., region proposal generation \citep{chen2015objdet}).
+The main challenges of object detection in this project will be the highly cluttered real-world scenes, understanding scene contexts (explained in Section \ref{sec:image-classification}) and an imbalanced distribution of objects.
+
 
 \subsubsection{Semantic Segmentation}
+\label{sec:semantic-segmentation}
 % Section 6.3
+In order to reconstruct a human-interpretable scene, it is important for this project to obtain semantically meaningful information from a given scene.
+However, it remains one of the most challenging tasks as obtaining dense pixel-level predictions is difficult due to occulusions and cluttering backgrounds in the real world.
+Also, it is heavily affected by the appearance and scale changes of objects as a robot obtains data while moving in an environment.
 
+Conditional Random Field (CRF) has been the most popular choice for semantic segmentation.
 
 \subsubsection{Object Pose Estimation}
+\label{sec:object-pose-estimation}
 % Section 6.5
 
 
@@ -119,7 +131,9 @@ A reinforcement learning (RL) agent can be trained to move safely in an unpercei
 \subsection{3D Reconstruction}
 % Section 6.6
 3D scan to CAD
-% object detection, pose estimation, 3D reconstruction, saliency detection
+Assuming the perceived data is RGB-D
+
+
 
 % Numerous improvements have been made for indoor scene understanding
 \subsection{Datasets}
