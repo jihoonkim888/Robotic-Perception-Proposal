@@ -70,11 +70,35 @@ Theoretical and methodological contributions in indoor scene understanding with 
 % scene classification, object detection
 \subsubsection{Image Classification}
 % Section 6.1 of Naseer et al.
+A perception framework should perform scene image classification to give the object detection and semantic segmentation models more general and useful information about a scene.
+% Information about a scene or objects is fundamental for more sophisticated tasks such as object detection and scene segmentation.
+Image classification is a basic, yet very important and challenging task for scene understanding.
+For example, perceived data must be represented with the best method (e.g., point cloud, 3D mesh) to maximise the useful information while minimising the computational complexity.
+Further, the proposed framework must be able to work well with limited amount of data, 3D deformations and background clutter that occur in the real-world conditions.
+\citet{socher2012convolutional} introduced the use of Recurrent Neural Network (RNN) with convolutional layers to extract low and high-level features from the perceived RGB-D data and improve the classification performance.
+Further, \citet{wu20153d} proposed the use of convolutional Deep Belief Network (DBN) that detects patterns from unlabelled data and showed that DBN can be used to learn joint distributions from 3D voxels.
+The use of convolutional layers reduces the computational costs compared to fully-connected (FC) layers thanks to lower number of parameters from weight sharing.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/mvcnn.png}
+    \caption{Multi-View CNN proposed by \citet{su2015multi}}
+    \label{fig:mvcnn}
+\end{figure}
+
+\citet{su2015multi} proposed Multi-View CNN (MVCNN) that uses multiple 2D render views of 3D objects for classification, shown in Figure \ref{fig:mvcnn}.
+It would be possible to capture multiple images of a 3D object in different views as it is planned to use video-recording robots for perception.
+\citet{qi2016volumetric} argued that MVCNNs perform better than volumetric CNNs due to input resolutions.
+The 3D representation of an object must be reduced to train a deep learning model in a reasonable timeframe.
+
+Apart from MVCNN, PointNet++ \citep{qi2017pointnet++} or volumetric CNN with 3D Generative Adversarial Network (GAN) \citep{wu2016learning} can be considered for image classification.
+The former uses perceived point cloud directly to obtain high-level features from several small local geometric features, whereas the latter performs unsupervised learning where the features created by GAN are used for classification.
+
 
 
 \subsubsection{Object Detection}
 % Section 6.2
-
+Once classification of scenes and objects is performed,
 
 \subsubsection{Semantic Segmentation}
 % Section 6.3
@@ -118,7 +142,7 @@ A sufficient amount of labelled images is essential to train a machine learning 
 TurtleBot with a RGB-D sensor would be sufficient for perception and navigation tasks planned in this project.
 
 \subsubsection{Simulation Environment}
-Gazebo
+Gazebo can be used
 
 % \subsection{Tasks and Time Allocation}
 
