@@ -98,7 +98,10 @@ The former uses perceived point cloud directly to obtain high-level features fro
 
 \subsubsection{Object Detection}
 % Section 6.2
-Once classification of scenes and objects is performed,
+% Once classification of scenes and objects is performed,
+The object detection algorithm in this project must be able to perform ``amodal object detection'', i.e. to find the location, shape and orientation of an object in a scene.
+Similar to other detection techniques in the field, the initial object detection approaches were based on handcrafted features \citep{khan2015separating}.
+However, the most recent approaches utilise deep neural network based algorithms (e.g.,region proposal generation \citep{chen2015objdet}).
 
 \subsubsection{Semantic Segmentation}
 % Section 6.3
