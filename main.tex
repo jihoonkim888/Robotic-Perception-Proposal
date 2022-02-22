@@ -119,15 +119,18 @@ Also, it is heavily affected by the appearance and scale changes of objects as a
 Conditional Random Field (CRF) has been the most popular choice for semantic segmentation with RGB-D data \citep{hermans2014semantic, deng2015semantic} due to its flexiblity on model contextualisation.
 Due to the recent rise of deep learning based methods, CNNs have been increasingly used \citep{gupta2014semantic, long2015fcsemantic} in the field, providing high-resolution segmentation.
 \citet{couprie2013semantic} labelled the RGB-D images and videos of indoor scenes using multiscale CNN to learn features directly with remarkable accuracies.
-A similar technique could be used for scene segmentation in this project.
+A similar technique that exploits temporal consistency in a video could be used for scene segmentation in this project.
 
 
 \subsubsection{Object Pose Estimation}
 \label{sec:object-pose-estimation}
 % Section 6.5
 Pose estimation is crucial for 3D CAD reconstruction task of objects in this project.
-It is similar to object detection explained in Section \ref{sec:object-detection}, therefore, they are often addressed jointly \citep{sedaghat2016pose}.
-The most challenging tasks for pose estimation are to detect objects and estimate their orientations concurrently, and to build an algorithm robust to changing positions of robots in an environment.
+It is often addressed jointly with object detection explained in Section \ref{sec:object-detection} due to their similarities \citep{sedaghat2016pose}.
+The most challenging tasks for pose estimation are to detect objects and estimate their orientations concurrently and to build an algorithm that works well when a robot is changing positions in an environment.
+The CNN-based models have shown promising results for pose estimation as well \citep{wohlhart2015posecnn}.
+\citet{krull2015posecnn} further proved that the CNN can be used with objects in differenet shapes and appearances, and it does not solely optimise to the geometry or appearance.
+Therefore, a CNN-based object pose detection model similar to \citep{wohlhart2015posecnn, krull2015posecnn} will be suitable for the detection of positions and poses of objects for this project.
 
 
 \subsection{Navigation}
@@ -137,8 +140,8 @@ A reinforcement learning (RL) agent can be trained to move safely in an unpercei
 
 \subsection{3D Reconstruction}
 % Section 6.6
-3D scan to CAD
-Assuming the perceived data is RGB-D
+3D reconstruction is the most important task for this project to build a representation of a real-world scene.
+KinectFusion \citep{newcombe2011kinectfusion} is a great reference for this project where RGB-D indoor dense information was used for surface mapping and tracking.
 
 
 

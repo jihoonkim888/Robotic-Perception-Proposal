@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.15)  21 FEB 2022 23:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.15)  22 FEB 2022 17:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -347,10 +347,10 @@ File: images/mvcnn.png Graphic file (type png)
 Package pdftex.def Info: images/mvcnn.png  used on input line 87.
 (pdftex.def)             Requested size: 362.37569pt x 133.16862pt.
  [2 <./images/mvcnn.png>] [3]
-<images/gantt-chart.png, id=142, 774.822pt x 260.829pt>
+<images/gantt-chart.png, id=150, 774.822pt x 260.829pt>
 File: images/gantt-chart.png Graphic file (type png)
 <use images/gantt-chart.png>
-Package pdftex.def Info: images/gantt-chart.png  used on input line 183.
+Package pdftex.def Info: images/gantt-chart.png  used on input line 186.
 (pdftex.def)             Requested size: 697.33336pt x 234.74391pt.
  [4
 
@@ -376,30 +376,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--30
 \T1/ptm/m/n/10 introducing-[]presence-[]platform-[]unleashing-[]mixed-[]reality-[]and-[]natural-[]interaction-[]for-[]oculus-[]developers/$[]
  []
 
+[5
 
-Underfull \hbox (badness 1852) in paragraph at lines 126--130
+]
+Underfull \hbox (badness 1852) in paragraph at lines 146--150
 []\T1/ptm/m/n/10 W. Li, S. Saeedi, J. Mc-Cor-mac, R. Clark, D. Tzoumanikas, Q. Ye, Y. Huang, R. Tang, and
  []
 
-) [5
-
-] (./main.aux)
+) [6] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 3B153CEAE8A795B1B47C46EA8B4C4385;3149.
  ) 
 Here is how much of TeX's memory you used:
- 9564 strings out of 478286
- 149511 string characters out of 5850726
- 451418 words of memory out of 5000000
- 27585 multiletter control sequences out of 15000+600000
+ 9577 strings out of 478286
+ 149840 string characters out of 5850726
+ 452665 words of memory out of 5000000
+ 27594 multiletter control sequences out of 15000+600000
  507349 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,7n,63p,513b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,513b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 473282 bytes).
+Output written on main.pdf (6 pages, 475292 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
+ 53 named destinations out of 1000 (max. 500000)
  163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
