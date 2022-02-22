@@ -133,16 +133,21 @@ The CNN-based models have shown promising results for pose estimation as well \c
 Therefore, a CNN-based object pose detection model similar to \citep{wohlhart2015posecnn, krull2015posecnn} will be suitable for the detection of positions and poses of objects for this project.
 
 
-\subsection{Navigation}
-\subsubsection{Reinforcement Learning}
-A reinforcement learning (RL) agent can be trained to move safely in an unperceived environment while maximising the amount of perceived data.
+% \subsection{Navigation}
+% \subsubsection{Reinforcement Learning}
+
 
 
 \subsection{3D Reconstruction}
 % Section 6.6
 3D reconstruction is the most important task for this project to build a representation of a real-world scene.
+It is challenging to reconstruct a scene with incomplete information.
+It is advantageous that a robot platform will be capturing information as it moves in a scene, giving data from many different views with continuity.
 KinectFusion \citep{newcombe2011kinectfusion} is a great reference for this project where RGB-D indoor dense information was used for surface mapping and tracking.
-
+A simple RGB-D sensor called \textit{``Kinect''} and a GPU hardware were used to model real-world scenes to dense surfaces in real-time, showing reasonable computational costs.
+For this project, however, the objects in a scene must be modelled individually in order create editable models.
+\citet{choy20163dr2n2} used Long Short Term Memory (LSTM) reconstruct objects from synthetic data with arbitrary views.
+A technique similar to this may be used to perform 3D object reconstruction in this project.
 
 
 % Numerous improvements have been made for indoor scene understanding
@@ -150,9 +155,11 @@ KinectFusion \citep{newcombe2011kinectfusion} is a great reference for this proj
 A sufficient amount of labelled images is essential to train a machine learning agent to obtain useful information from perception data.
 \citet{silberman2011indoor} and \citet{li2018interiornet, mccormac2016scenenet} has improved indoor scene understanding by providing large-scale real and synthetic indoor image datasets, respectively.
 
-\subsection{Explainable Learning Methods}
-
-
+\subsection{Explainable Learning}
+A reinforcement learning (RL) agent must be able to move safely in an unperceived environment while maximising the amount of useful information in perceived data.
+A simple deep RL method can be used to train an agent in a virtual indoor environment.
+\citet{samek2017explainable} surveys methods to explain deep learning models that are usually applied in a \textit{``black-box''} manner.
+Computing sensitivity of the prediction according to changes in input and decomposing the decision in terms of input variables were found two approaches to explaining predictions of deep learning models.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
