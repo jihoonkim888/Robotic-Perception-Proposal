@@ -27,7 +27,7 @@
 
 % Why is indoor scene understanding important?
 The field has witnessed rapid improvements in scene understanding thanks to the introduction of state-of-the-art deep learning methods and ever-improving computational resources.
-AI with a good scene understanding can be useful in many places.
+An artificial intelligence (AI) with a good scene understanding can be useful in many places.
 %(e.g., domestic robots, autonomous vehicles).
 For example, it may help people with visual difficulties by creating an accurate 3D representation of the surrounding environment and providing safe guidance. Also, the recent rise of \textit{``metaverse''} further increases the demand of scene understanding for real-time communication and interaction between its users and the real-world environment \citep{oculus2021}.
 
@@ -51,7 +51,7 @@ This research aims to develop a real-time robotics perception framework that con
 The objectives are to:
 \begin{enumerate}
 	\item develop a real-time robotic perception and navigation method that captures information from real-world indoor scenes with explainable deep learning methods
-	\item develop an automated 3D scan to CAD method that uses captured information to reconstruct a scene and convert into editable geometric models with semantic contexts with minimum human interventions
+	\item develop an automated 3D object reconstruction method that uses captured information to reconstruct a scene and convert into editable geometric models with semantic contexts with minimum human interventions
 \end{enumerate}
 
 % 1) develop a real-time robotic perception and navigation method that captures information from real-world indoor scenes with explainable deep learning methods; and
@@ -78,7 +78,8 @@ A perception framework should perform scene image classification to give the obj
 Image classification is a basic, yet very important and challenging task for scene understanding.
 For example, perceived data must be represented with the best method (e.g., point cloud, 3D mesh) to maximise the useful information while minimising the computational complexity.
 Further, the proposed framework must be able to work well with limited amount of data, 3D deformations and background clutter that occur in the real-world conditions.
-\citet{socher2012convolutional} introduced the use of Recurrent Neural Network (RNN) with convolutional layers to extract low and high-level features from the perceived RGB-D data and improve the classification performance.
+
+\citet{socher2012convolutional} introduced the use of recurrent neural network (RNN) with convolutional layers to extract low and high-level features from the perceived RGB-D data and improve the classification performance.
 Further, \citet{wu20153d} proposed the use of convolutional Deep Belief Network (DBN) that detects patterns from unlabelled data and showed that DBN can be used to learn joint distributions from 3D voxels.
 The use of convolutional layers reduces the computational costs compared to fully-connected (FC) layers thanks to lower number of parameters from weight sharing.
 
@@ -89,13 +90,13 @@ The use of convolutional layers reduces the computational costs compared to full
 	\label{fig:mvcnn}
 \end{figure}
 
-\citet{su2015multi} proposed Multi-View Convolutional Neural Network (MVCNN) that uses multiple 2D render views of 3D objects for classification, shown in Figure \ref{fig:mvcnn}.
+\citet{su2015multi} proposed multi-view convolutional neural network (MVCNN) that uses multiple 2D render views of 3D objects for classification, shown in Figure \ref{fig:mvcnn}.
 It would be possible to capture multiple images of a 3D object in different views as it is planned to use video-recording robots for perception.
 \citet{qi2016volumetric} argued that MVCNNs perform better than volumetric CNNs due to input resolutions.
 The 3D representation of an object must be reduced to train a deep learning model in a reasonable timeframe.
 
-Apart from MVCNN, PointNet++ \citep{qi2017pointnet++} or volumetric CNN with 3D Generative Adversarial Network (GAN) \citep{wu2016learning} can be considered for image classification.
-The former uses perceived point cloud directly to obtain high-level features from several small local geometric features, whereas the latter performs unsupervised learning where the features created by GAN are used for classification.
+% Apart from MVCNN, PointNet++ \citep{qi2017pointnet++} or volumetric CNN with 3D Generative Adversarial Network (GAN) \citep{wu2016learning} can be considered for image classification.
+% The former uses perceived point cloud directly to obtain high-level features from several small local geometric features, whereas the latter performs unsupervised learning where the features created by GAN are used for classification.
 
 
 
@@ -138,28 +139,34 @@ Therefore, a CNN-based object pose detection model similar to \citep{wohlhart201
 
 
 
-\subsection{3D Reconstruction}
+\subsection{3D Object Reconstruction}
+\label{sec:3d-object-reconstruction}
 % Section 6.6
 3D reconstruction is the most important task for this project to build a representation of a real-world scene.
 It is challenging to reconstruct a scene with incomplete information.
 It is advantageous that a robot platform will be capturing information as it moves in a scene, giving data from many different views with continuity.
+
 KinectFusion \citep{newcombe2011kinectfusion} is a great reference for this project where RGB-D indoor dense information was used for surface mapping and tracking.
 A simple RGB-D sensor called \textit{``Kinect''} and a GPU hardware were used to model real-world scenes to dense surfaces in real-time, showing reasonable computational costs.
 For this project, however, the objects in a scene must be modelled individually in order create editable models.
-\citet{choy20163dr2n2} used Long Short Term Memory (LSTM) reconstruct objects from synthetic data with arbitrary views.
+\citet{choy20163dr2n2} used long short-term memory (LSTM) reconstruct objects from synthetic data with arbitrary views.
 A technique similar to this may be used to perform 3D object reconstruction in this project.
 
 
 % Numerous improvements have been made for indoor scene understanding
 \subsection{Datasets}
+\label{sec:datasets}
 A sufficient amount of labelled images is essential to train a machine learning agent to obtain useful information from perception data.
-\citet{silberman2011indoor} and \citet{li2018interiornet, mccormac2016scenenet} has improved indoor scene understanding by providing large-scale real and synthetic indoor image datasets, respectively.
+\citet{silberman2011indoor} and \citet{li2018interiornet, mccormac2016scenenet} has improved indoor scene understanding by providing labelled large-scale real and synthetic indoor image datasets, respectively.
+These datasets will be suitable to train and test the learning models for many different tasks stated above.
 
 \subsection{Explainable Learning}
+\label{sec:explainable-learning}
 A reinforcement learning (RL) agent must be able to move safely in an unperceived environment while maximising the amount of useful information in perceived data.
 A simple deep RL method can be used to train an agent in a virtual indoor environment.
-\citet{samek2017explainable} surveys methods to explain deep learning models that are usually applied in a \textit{``black-box''} manner.
+\citet{samek2017explainable} surveyed the methods to explain deep learning models that are usually applied in a \textit{``black-box''} manner.
 Computing sensitivity of the prediction according to changes in input and decomposing the decision in terms of input variables were found two approaches to explaining predictions of deep learning models.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -173,10 +180,13 @@ Computing sensitivity of the prediction according to changes in input and decomp
 
 \subsection{Empirical Materials}
 \subsubsection{Robot Platform}
-TurtleBot with a RGB-D sensor would be sufficient for perception and navigation tasks planned in this project.
+TurtleBot with a RGB-D sensor (e.g., Kinect of Microsoft) would be sufficient for perception and navigation tasks planned in this project.
+The robot platform should be tall enough to perceive as much as possible; it will not be able to perceive objects on a table if it's too small.
 
 \subsubsection{Simulation Environment}
-Gazebo can be used
+A simulation environment must be capable of fully utilising the RGB-D image and video datasets to be used for learning models.
+Gazebo may be used with robot operating system (ROS) used as a primary data processing and control platform.
+
 
 % \subsection{Tasks and Time Allocation}
 
@@ -190,7 +200,7 @@ Gazebo can be used
 
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.9]{images/gantt-chart.png}
+		\includegraphics[scale=0.75]{images/gantt-chart.png}
 		\caption{Gantt chart for time allocation of this project.}
 		\label{fig:gantt-chart}
 	\end{figure}
